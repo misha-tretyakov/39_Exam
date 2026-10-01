@@ -9,7 +9,7 @@
 using namespace std;
 
 
-void Task4::writeWords() {
+void Hangman::writeWords() {
     ofstream file("words.txt", ios::out | ios::trunc);
 
     if (file.is_open()) {
@@ -19,7 +19,7 @@ void Task4::writeWords() {
     }
 }
 
-bool Task4::loadWords() {
+bool Hangman::loadWords() {
     ifstream file("words.txt");
     count = 0;
 
@@ -32,7 +32,7 @@ bool Task4::loadWords() {
     return count > 0;
 }
 
-void Task4::chooseWord() {
+void Hangman::chooseWord() {
     int num_word = rand() % count;
     num_letter = 0;
 
@@ -51,13 +51,13 @@ void Task4::chooseWord() {
     remaining = num_letter;
 }
 
-void Task4::printInfo() {
+void Hangman::printInfo() {
     cout << "\nWord: " << hidden << endl;
     cout << "Mistakes out of 6: " << errors << endl;
     cout << "Letters used: " << letters << endl;
 }
 
-void Task4::inputLetter(const string& input) {
+void Hangman::inputLetter(const string& input) {
     if (input.length() != 1) {
         cout << "only one letter!" << endl;
         return;
@@ -96,7 +96,7 @@ void Task4::inputLetter(const string& input) {
     }
 }
 
-void Task4::endGame(time_t start) {
+void Hangman::endGame(time_t start) {
     if (remaining == 0) {
         cout << "You win!" << endl;
     }
@@ -113,7 +113,7 @@ void Task4::endGame(time_t start) {
     cout << "Letters used: " << letters << endl;
 }
 
-void Task4::play() {
+void Hangman::play() {
 
     writeWords();
 

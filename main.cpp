@@ -1,7 +1,7 @@
 #include "header.h"
 
 int main() {
-    Task4 game;
+    Hangman game;
     game.play();
 
     return 0;

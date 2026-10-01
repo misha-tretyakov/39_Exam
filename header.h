@@ -10,7 +10,7 @@
 #include <string>
 using namespace std;
 
-class Task4 {
+class Hangman {
 private:
     char words[50][30];
     char word[30];
