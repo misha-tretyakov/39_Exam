@@ -26,7 +26,7 @@ private:
     void writeWords();
     bool loadWords();
     void chooseWord();
-    void showStats();
+    void printInfo();
     void inputLetter(const string& input);
     void endGame(time_t start);
 

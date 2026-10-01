@@ -52,7 +52,7 @@ void Task4::chooseWord() {
     remaining = num_letter;
 }
 
-void Task4::showStats() {
+void Task4::printInfo() {
     cout << "\nWord: " << hidden << endl;
     cout << "Mistakes out of 6: " << errors << endl;
     cout << "Letters used: " << letters << endl;
@@ -128,7 +128,7 @@ void Task4::play() {
     time_t start = time(0);
 
     while (errors < 6 && remaining > 0) {
-        showStats();
+        printInfo();
         cout << "Enter letter >>>   ";
 
         string input;
