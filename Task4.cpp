@@ -127,17 +127,15 @@ void Task4::play() {
     srand(time(0));
     chooseWord();
 
-    time_t start = time(0);
+    const time_t start = time(0);
 
     while (errors < 6 && remaining > 0) {
         printInfo();
         cout << "Enter letter >>>   ";
 
         string input;
-
-        if (!(cin >> input)) {
-            break;
-        }
+        cin >> input;
+        inputLetter(input);
 
         inputLetter(input);
     }
