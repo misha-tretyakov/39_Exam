@@ -98,10 +98,10 @@ void Task4::inputLetter(const string& input) {
 
 void Task4::endGame(time_t start) {
     if (remaining == 0) {
-        cout << "You won!" << endl;
+        cout << "You win!" << endl;
     }
     else if (errors == 6) {
-        cout << "You lost!" << endl;
+        cout << "You lose!" << endl;
     }
     else {
         cout << "Smth went wrong..." << endl;
