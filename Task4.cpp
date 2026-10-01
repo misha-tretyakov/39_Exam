@@ -66,7 +66,7 @@ void Task4::inputLetter(const string& input) {
     char letter = input[0];
 
     if (letter < 'a' || letter > 'z') {
-        cout << "lowercase only" << endl;
+        cout << "unsupported character" << endl;
         return;
     }
 
