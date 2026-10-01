@@ -8,7 +8,6 @@
 
 using namespace std;
 
-// Task4:: означает, что метод принадлежит классу Task4.
 
 void Task4::writeWords() {
     ofstream file("words.txt", ios::out | ios::trunc);
