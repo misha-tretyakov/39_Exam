@@ -114,6 +114,9 @@ void Task4::endGame(time_t start) {
 }
 
 void Task4::play() {
+
+    writeWords();
+
     if (!loadWords()) {
         cout << "no words found" << endl;
         return;
